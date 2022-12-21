@@ -1,0 +1,5 @@
+SELECT `product`.*, `bakery`.`id` AS `bakery_id`, `breakfast`.`id` AS `breakfast_id`, `dairy`.`id` AS `dairy_id`
+FROM `product` 
+	LEFT JOIN `bakery` ON `bakery`.`product_id` = `product`.`id` 
+	LEFT JOIN `breakfast` ON `breakfast`.`product_id` = `product`.`id` 
+	LEFT JOIN `dairy` ON `dairy`.`product_id` = `product`.`id`;
